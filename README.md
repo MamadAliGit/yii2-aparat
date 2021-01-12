@@ -28,7 +28,7 @@ Usage
 Add this code to config file
 
 ```php
-    'modules' => [
+    'components' => [
         ...
         'aparat' => [
             'class' => 'mamadali\Aparat',
