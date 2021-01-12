@@ -1,16 +1,15 @@
 <?php
 
-namespace mamadali\types;
+namespace mamadali\models;
 
 
-use http\Url;
-use mamadali\base\Type;
+use mamadali\base\Model;
 
 /**
  * @author MamadAli Git <mhmd.ali.shabani@gmail.com>
  * This object represents a chat.
  */
-class VideoList extends Type
+class VideoList extends Model
 {
     /**
      * آیدی ویدیو
@@ -101,4 +100,34 @@ class VideoList extends Type
      * @var boolean
      */
     public $_360d;
+
+    public function set360d(){
+        return $this->_360d;
+    }
+
+    /**
+     * @var boolean
+     */
+    public $isHidden;
+
+    /** @var string */
+    public $create_date;
+
+    /** @var integer */
+    public $sdate_timediff;
+
+    /** @var string */
+    public $video_date_status;
+
+    /** @var string */
+    public $deleteurl;
+
+
+
+    public function rules()
+    {
+        return [
+            [['id','userid','visit_cnt','duration','sdate_timediff','sdate','_360d','title','username','autoplay','big_poster','create_date','deleteurl','frame','isHidden','official','process','small_poster','uid','video_date_status'], 'safe']
+        ];
+    }
 }

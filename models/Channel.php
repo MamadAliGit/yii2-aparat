@@ -1,15 +1,15 @@
 <?php
 
-namespace mamadali\types;
+namespace mamadali\models;
 
 
-use mamadali\base\Type;
+use mamadali\base\Model;
 
 /**
  * @author MamadAli Git <mhmd.ali.shabani@gmail.com>
  * This object represents a chat.
  */
-class Channel extends Type
+class Channel extends Model
 {
 
     /**
