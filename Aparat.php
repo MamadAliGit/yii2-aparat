@@ -137,4 +137,49 @@ class Aparat extends AparatBase
         ];
     }
 
+
+    /**
+     *   @var Array
+     *   sample
+     *   Yii::$app->aparat->videoBySearch([
+     *       'text' => 'search',
+     *       'perpage' => 10,
+     *   ]);
+     */
+    public function videoBySearch(array $params)
+    {
+        $body = $this->send('videoBySearch', $params);
+        $model = [new VideoList()];
+        $model = Model::createMultiple(VideoList::className(),$body['videobysearch']);
+        Model::loadMultiple($model, $body['videobysearch'],'');
+
+        $pagination = new Pagination($body['ui']);
+        return [
+            'categoryvideos' => $model,
+            'ui' => $pagination,
+        ];
+    }
+
+    /**
+     *   @var Array
+     *   sample
+     *   Yii::$app->aparat->videoBySearch([
+     *       'text' => 'search',
+     *       'perpage' => 10,
+     *   ]);
+     */
+    public function videobytag(array $params)
+    {
+        $body = $this->send('videobytag', $params);
+        $model = [new VideoList()];
+        $model = Model::createMultiple(VideoList::className(),$body['videobytag']);
+        Model::loadMultiple($model, $body['videobytag'],'');
+
+        $pagination = new Pagination($body['ui']);
+        return [
+            'categoryvideos' => $model,
+            'ui' => $pagination,
+        ];
+    }
+
 }
