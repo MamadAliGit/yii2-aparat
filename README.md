@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist mamadaligit/yii2-aparat "*"
+php composer.phar require --prefer-dist mamadali/yii2-aparat "*"
 ```
 
 or add
 
 ```
-"mamadaligit/yii2-aparat": "*"
+"mamadali/yii2-aparat": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -25,7 +25,14 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
-Once the extension is installed, simply use it in your code by  :
+Add this code to config file
 
 ```php
-<?= \common\components\mamadali\AutoloadExample::widget(); ?>```
+    'modules' => [
+        ...
+        'aparat' => [
+            'class' => 'mamadali\Aparat',
+        ],
+        ...
+    ];
+```
