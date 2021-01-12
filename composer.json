@@ -1,0 +1,21 @@
+{
+    "name": "mamadaligit/yii2-aparat",
+    "description": "Aparat Api",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","aparat","آپارات","api آپارات"," aparat api"],
+    "license": "LGPL-3.0+",
+    "authors": [
+        {
+            "name": "MamadAliGit",
+            "email": "mhmd.ali.shabani@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "common\\components\\mamadali\\": ""
+        }
+    }
+}
