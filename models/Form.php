@@ -12,4 +12,15 @@ use mamadali\base\Type;
 class Form extends Type
 {
 
+    /**
+     * اطلاعاتی که میخواهید از طریق POST ارسال نمایید به این آدرس بفرستید
+     * @var url
+     */
+    public $formAction;
+
+    /**
+     * آیدی فرم
+     * @var integer
+     */
+    public $frm_id;
 }

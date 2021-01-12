@@ -26,7 +26,6 @@ class AparatBase extends Component
      */
     public function initializeParams($params)
     {
-        $is_resource = false;
         $multipart    = [];
 
         if (empty($params)) {
