@@ -1,6 +1,6 @@
 Aparat Api
 ==========
-Aparat Api
+aparat.com/api
 
 Installation
 ------------
