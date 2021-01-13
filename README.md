@@ -21,11 +21,25 @@ or add
 
 to the require section of your `composer.json` file.
 
+Method list usable
+-----
+
+```php
+login
+profile
+userBySearch
+profilecategories
+video
+categoryVideos
+videoByUser
+videoBySearch
+videobytag
+```
 
 Usage
 -----
 
-Add this code to config file
+first add to config.php or if use advanced project add to common/config/main.php
 
 ```php
     'components' => [
@@ -35,4 +49,10 @@ Add this code to config file
         ],
         ...
     ];
+```
+How to get profile info
+```php
+   $res = Yii::$app->aparat->profile([
+           'username' => 'username',
+       ]);
 ```
