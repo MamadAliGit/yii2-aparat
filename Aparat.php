@@ -132,7 +132,7 @@ class Aparat extends AparatBase
 
         $pagination = new Pagination($body['ui']);
         return [
-            'categoryvideos' => $model,
+            'videobyuser' => $model,
             'ui' => $pagination,
         ];
     }
@@ -155,7 +155,7 @@ class Aparat extends AparatBase
 
         $pagination = new Pagination($body['ui']);
         return [
-            'categoryvideos' => $model,
+            'videobysearch' => $model,
             'ui' => $pagination,
         ];
     }
@@ -177,7 +177,7 @@ class Aparat extends AparatBase
 
         $pagination = new Pagination($body['ui']);
         return [
-            'categoryvideos' => $model,
+            'videobytag' => $model,
             'ui' => $pagination,
         ];
     }
