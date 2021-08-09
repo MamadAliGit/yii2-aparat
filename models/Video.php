@@ -214,4 +214,7 @@ class Video extends Model
 
     /** @var string */
     public $follow_status;
+
+	/** @var string */
+	public $ip_address;
 }
